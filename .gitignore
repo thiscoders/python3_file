@@ -1,0 +1,23 @@
+# Pycharm
+.idea
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# backup files
+*~
+*.swp
+
+# Translations
+*.mo
+
+# vscode
+.vscode
+
+# apple file system
+.DS_Store
+
+# files
+files/*
