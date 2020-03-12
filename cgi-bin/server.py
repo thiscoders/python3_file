@@ -6,7 +6,7 @@ import cgitb
 cgitb.enable()
 form = cgi.FieldStorage()
 
-set_password = 'hello1#'
+set_password = '12345'
 
 # verity password
 password = form['password']
