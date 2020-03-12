@@ -6,11 +6,13 @@ import cgitb
 cgitb.enable()
 form = cgi.FieldStorage()
 
+set_password = 'hello1#'
+
 # verity password
 password = form['password']
-if password.value != 'uphello1':
+if password.value != set_password:
    print('Content-type:text/html;charset=utf-8 \n\n')
-   print('口令错误')
+   print('口令错误!')
 else:
    # Get filename here.
    fileitem = form['uploadfile']
@@ -20,7 +22,7 @@ else:
       fn = os.path.basename(fileitem.filename)
       # get store path  and save it 
       open(os.getcwd()+'/files/' + fn,'wb').write(fileitem.file.read())
-      message = fn + '上传成功!'
+      message = fn + ' 上传成功!'
    else:
       message = '没有选择文件!'
    print('Content-type:text/html;charset=utf-8 \n\n')

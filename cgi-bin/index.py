@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # coding=utf-8
-
+submit_url = 'http://localhost:8000/cgi-bin/server.py'
 html_content = '''
 <html>
 <head>
@@ -24,7 +24,7 @@ html_content = '''
 <body>
 
     <div>
-        <form action="http://localhost:8000/cgi-bin/server.py" method="post" enctype="multipart/form-data">
+        <form action="submit_url" method="post" enctype="multipart/form-data">
             <table class="box">
                 <tr>
                     <th><label for="file">文件:</label></th>
@@ -44,6 +44,6 @@ html_content = '''
 </body>
 
 </html>
-'''
+'''.replace('submit_url',submit_url)
 print(html_content)
 
